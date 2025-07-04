@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: sans-serif;
+    background-color:lightyellow;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a{
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a{
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child{
+    color: darkgray;
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span{
+    margin-left: 5px;
+}
+
+/* section 1 */
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.hero-section .text{
+    flex: 5;
+}
+
+.hero-section .text h2{
+    font-size: 45px;
+}
+
+.hero-section .text .links{
+    margin-top: 25px;
+}
+
+.hero-section .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid rgb(17, 17, 77);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+.hero-section .text .links a:hover{
+    color: blue;
+    border: 2px solid blue;
+}
+
+.hero-section .headshot{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .headshot img{
+    border-radius: 50%;
+    width: 350px;
+}
+
+.about-me{
+    text-align: center;
+    margin-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.about-me h2{
+    font-size: 35px;
+}
+
+
+/* section 3 skills */
+.skill-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skill-section h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+.skill-section .text{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skill-section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-section .cells .cell{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    padding: 10px 20px;
+    border: 1.5px solid lightgrey;
+    border-radius: 5px;
+    margin: 10px;
+    gap: 10px;
+}
+
+.skill-section .cells .cell img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skill-section .cells .cell span{
+    font-size: 18px;
+}
+
+/* section 4 contact */
+.contact-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section h2{
+    font-size: 35px;
+}
+
+.contact-section .group{
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text{
+    flex: 3;
+    margin-top: 20pxs;
+}
+ 
+.contact-section .group form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea{
+    font-family: sans-serif;
+    border: 2px solid blue;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button{
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white;
+    border: none;
+    height: 50px;
+    background-color: blue;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.contact-section .group form:hover{
+    filter: brightness(.9);
+}
+
+@media(max-width:850px){
+    /* section 1 hero*/
+    .hero-section .text h2{
+        font-size: 35px;
+    } 
+}
+
+@media(max-width:740px){
+    /* section 1 hero*/
+    .hero-section{
+        flex-direction: column-reverse;
+    } 
+
+    .hero-section .headshot img{
+        width: 300px;
+    }
+}
+
+@media(max-width:600px){
+    /* NAVBAR*/
+    nav{
+        padding: 0 20px;
+    }
+
+    nav .right a{
+        font-size: 22px;
+    }
+
+    nav .right a:last-child{
+        color:darkgray;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    /* section 1 hero */
+    .hero-section{
+        padding: 0 20px;
+    }
+
+    .hero-section .text h2{
+        font-size: 30px;
+    }
+
+    nav .right a span{
+    display: none;
+    }
+
+    /* section 2 about me */
+    .about-me{
+        padding: 0 20px;
+    }
+
+    /* section 3 skills */
+    .skill-section{
+    padding: 0 20px;
+    }
+    .skill-section .cells .cell span{
+        font-size: 15px;
+    }
+    
+    /* section 4 contact */
+    .contact-section .group{
+        flex-direction: column;
+    }
+
+    /* section 4 contact */
+    .contact-section{
+        padding: 0 20px;
+    }
+}
+.webaziz{
+    text-align: center;
+    margin-bottom: 100px;
+    background-color: lightgreen;
+}
+
+.webaziz h2{
+    color: blue;
+    padding: 5px;
+}
+
+
